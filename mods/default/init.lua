@@ -319,7 +319,7 @@ minetest.register_node("default:stone", {
 	tiles = {"default_stone.png"},
 	groups = {cracky=3},
 	drop = 'default:cobble',
-	sounds = {footstep={name="default_hard_footstep",gain=0.2}, dug={name="default_dug_node",gain=1.0}},
+	sounds = {footstep={name="default_hard_footstep",gain=0.2}, dug={name="default_dug_node",gain=1.0}, dig={name="default_dig_cracky",gain=0.4}},
 })
 
 minetest.register_node("default:stone_with_coal", {
@@ -327,7 +327,7 @@ minetest.register_node("default:stone_with_coal", {
 	tiles = {"default_stone.png^default_mineral_coal.png"},
 	groups = {cracky=3},
 	drop = 'default:coal_lump',
-	sounds = {footstep={name="default_hard_footstep",gain=0.2}, dug={name="default_dug_node",gain=1.0}},
+	sounds = {footstep={name="default_hard_footstep",gain=0.2}, dug={name="default_dug_node",gain=1.0}, dig={name="default_dig_cracky",gain=0.4}},
 })
 
 minetest.register_node("default:stone_with_iron", {
@@ -335,7 +335,7 @@ minetest.register_node("default:stone_with_iron", {
 	tiles = {"default_stone.png^default_mineral_iron.png"},
 	groups = {cracky=3},
 	drop = 'default:iron_lump',
-	sounds = {footstep={name="default_hard_footstep",gain=0.2}, dug={name="default_dug_node",gain=1.0}},
+	sounds = {footstep={name="default_hard_footstep",gain=0.2}, dug={name="default_dug_node",gain=1.0}, dig={name="default_dig_cracky",gain=0.4}},
 })
 
 minetest.register_node("default:dirt_with_grass", {
@@ -343,35 +343,35 @@ minetest.register_node("default:dirt_with_grass", {
 	tiles = {"default_grass.png", "default_dirt.png", "default_dirt.png^default_grass_side.png"},
 	groups = {crumbly=3},
 	drop = 'default:dirt',
-	sounds = {footstep={name="default_grass_footstep",gain=0.4}, dug={name="default_dug_node",gain=1.0}},
+	sounds = {footstep={name="default_grass_footstep",gain=0.4}, dug={name="",gain=1.0}, dig={name="default_dig_crumbly",gain=0.4}},
 })
 
 minetest.register_node("default:dirt", {
 	description = "Dirt",
 	tiles = {"default_dirt.png"},
 	groups = {crumbly=3},
-	sounds = {footstep={name="default_grass_footstep",gain=0.4}, dug={name="default_dug_node",gain=1.0}},
+	sounds = {footstep={name="default_grass_footstep",gain=0.4}, dug={name="",gain=1.0}, dig={name="default_dig_crumbly",gain=0.4}},
 })
 
 minetest.register_node("default:sand", {
 	description = "Sand",
 	tiles = {"default_sand.png"},
 	groups = {crumbly=3},
-	sounds = {footstep={name="default_grass_footstep",gain=0.25}, dug={name="",gain=0.25}},
+	sounds = {footstep={name="default_grass_footstep",gain=0.25}, dug={name="",gain=0.25}, dig={name="default_dig_crumbly",gain=0.4}},
 })
 
 minetest.register_node("default:gravel", {
 	description = "Gravel",
 	tiles = {"default_gravel.png"},
 	groups = {crumbly=2},
-	sounds = {footstep={name="default_gravel_footstep",gain=0.45}, dug={name="default_dug_node",gain=1.0}},
+	sounds = {footstep={name="default_gravel_footstep",gain=0.45}, dug={name="",gain=1.0}, dig={name="default_dig_crumbly",gain=0.4}},
 })
 
 minetest.register_node("default:tree", {
 	description = "Tree",
 	tiles = {"default_tree_top.png", "default_tree_top.png", "default_tree.png"},
 	groups = {snappy=1,choppy=2,oddly_breakable_by_hand=1,flammable=2},
-	sounds = {footstep={name="default_hard_footstep",gain=0.3}, dug={name="default_dug_node",gain=1.0}},
+	sounds = {footstep={name="default_hard_footstep",gain=0.3}, dug={name="default_dug_node",gain=1.0}, dig={name="default_dig_choppy",gain=0.4}},
 })
 
 minetest.register_node("default:leaves", {
@@ -395,7 +395,7 @@ minetest.register_node("default:leaves", {
 			}
 		}
 	},
-	sounds = {footstep={name="default_grass_footstep",gain=0.25}, dig={name="default_dig_crumbly",gain=0.4}, dug={name="",gain=1.0}},
+	sounds = {footstep={name="default_grass_footstep",gain=0.25}, dug={name="",gain=1.0}, dig={name="default_dig_crumbly",gain=0.4}},
 })
 
 minetest.register_node("default:glass", {
@@ -406,7 +406,7 @@ minetest.register_node("default:glass", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	groups = {snappy=2,cracky=3,oddly_breakable_by_hand=3},
-	sounds = {footstep={name="default_hard_footstep",gain=0.25}, dug={name="default_break_glass",gain=1.0}},
+	sounds = {footstep={name="default_hard_footstep",gain=0.25}, dug={name="default_break_glass",gain=1.0}, dig={name="",gain=0.4}},
 })
 
 minetest.register_node("default:ladder", {
@@ -425,21 +425,21 @@ minetest.register_node("default:ladder", {
 	},
 	groups = {snappy=1,choppy=2,oddly_breakable_by_hand=3,flammable=2},
 	legacy_wallmounted = true,
-	sounds = {footstep={name="default_hard_footstep",gain=0.3}, dug={name="default_dug_node",gain=1.0}},
+	sounds = {footstep={name="default_hard_footstep",gain=0.3}, dug={name="",gain=1.0}, dig={name="default_dig_choppy",gain=0.4}},
 })
 
 minetest.register_node("default:wood", {
 	description = "Wooden Planks",
 	tiles = {"default_wood.png"},
 	groups = {snappy=1,choppy=2,oddly_breakable_by_hand=2,flammable=3},
-	sounds = {footstep={name="default_hard_footstep",gain=0.3}, dug={name="default_dug_node",gain=1.0}},
+	sounds = {footstep={name="default_hard_footstep",gain=0.3}, dug={name="default_dug_node",gain=1.0}, dig={name="default_dig_choppy",gain=0.4}},
 })
 
 minetest.register_node("default:mese", {
 	description = "Mese",
 	tiles = {"default_mese.png"},
 	groups = {cracky=1},
-	sounds = {footstep={name="",gain=1.0}, dug={name="default_dug_node",gain=1.0}},
+	sounds = {footstep={name="",gain=1.0}, dug={name="default_dug_node",gain=1.0}, dig={name="default_dig_cracky",gain=0.4}},
 })
 
 minetest.register_node("default:water_flowing", {
@@ -555,7 +555,7 @@ minetest.register_node("default:torch", {
 	},
 	groups = {choppy=2,dig_immediate=3},
 	legacy_wallmounted = true,
-	sounds = {footstep={name="",gain=1.0}, dug={name="default_dug_node",gain=1.0}},
+	sounds = {footstep={name="",gain=1.0}, dug={name="",gain=1.0}, dig={name="",gain=1.0}},
 })
 
 minetest.register_node("default:chest", {
@@ -565,7 +565,7 @@ minetest.register_node("default:chest", {
 	paramtype2 = "facedir",
 	groups = {snappy=2,choppy=2,oddly_breakable_by_hand=2},
 	legacy_facedir_simple = true,
-	sounds = {footstep={name="default_hard_footstep",gain=0.3}, dug={name="default_dug_node",gain=1.0}},
+	sounds = {footstep={name="default_hard_footstep",gain=0.3}, dug={name="default_dug_node",gain=1.0}, dig={name="default_dig_choppy",gain=0.4}},
 	on_construct = function(pos)
 		local meta = minetest.env:get_meta(pos)
 		meta:set_string("formspec",
@@ -619,7 +619,7 @@ minetest.register_node("default:furnace", {
 	paramtype2 = "facedir",
 	groups = {cracky=2},
 	legacy_facedir_simple = true,
-	sounds = {footstep={name="default_hard_footstep",gain=0.2}, dug={name="default_dug_node",gain=1.0}},
+	sounds = {footstep={name="default_hard_footstep",gain=0.2}, dug={name="default_dug_node",gain=1.0}, dig={name="default_dig_cracky",gain=0.4}},
 	on_construct = function(pos)
 		local meta = minetest.env:get_meta(pos)
 		meta:set_string("formspec", furnace_inactive_formspec)
@@ -656,7 +656,7 @@ minetest.register_node("default:furnace_active", {
 	drop = "default:furnace",
 	groups = {cracky=2, not_in_creative_inventory=1},
 	legacy_facedir_simple = true,
-	sounds = {footstep={name="default_hard_footstep",gain=0.2}, dug={name="default_dug_node",gain=1.0}},
+	sounds = {footstep={name="default_hard_footstep",gain=0.2}, dug={name="default_dug_node",gain=1.0}, dig={name="default_dig_cracky",gain=0.4}},
 	on_construct = function(pos)
 		local meta = minetest.env:get_meta(pos)
 		meta:set_string("formspec", furnace_inactive_formspec)
@@ -800,7 +800,7 @@ minetest.register_node("default:cobble", {
 	description = "Cobblestone",
 	tiles = {"default_cobble.png"},
 	groups = {cracky=3},
-	sounds = {footstep={name="default_hard_footstep",gain=0.2}, dug={name="default_dug_node",gain=1.0}},
+	sounds = {footstep={name="default_hard_footstep",gain=0.2}, dug={name="default_dug_node",gain=1.0}, dig={name="default_dig_cracky",gain=0.4}},
 })
 
 minetest.register_node("default:sapling", {
@@ -813,8 +813,8 @@ minetest.register_node("default:sapling", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
-	groups = {snappy=2,dig_immediate=3,flammable=2},
-	sounds = {footstep={name="",gain=1.0}, dug={name="default_dug_node",gain=1.0}},
+	groups = {snappy=2,dig_immediate=2,flammable=2},
+	sounds = {footstep={name="",gain=1.0}, dug={name="",gain=1.0}, dig={name="default_dig_crumbly",gain=0.4}},
 })
 
 minetest.register_node("default:apple", {
@@ -826,9 +826,9 @@ minetest.register_node("default:apple", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
-	groups = {fleshy=3,dig_immediate=3,flammable=2},
+	groups = {fleshy=3,dig_immediate=2,flammable=2},
 	on_use = minetest.item_eat(4),
-	sounds = {footstep={name="",gain=1.0}, dug={name="default_dug_node",gain=1.0}},
+	sounds = {footstep={name="",gain=1.0}, dug={name="",gain=1.0}, dig={name="default_dig_crumbly",gain=0.4}},
 })
 
 minetest.register_craftitem("default:stick", {
