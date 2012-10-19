@@ -14,7 +14,7 @@ minetest.register_item(":", {
 	}
 })
 
-minetest.register_tool("default:pick_wood", {
+minetest.register_tool("minimal:pick_wood", {
 	description = "Wooden Pickaxe",
 	inventory_image = "default_tool_woodpick.png",
 	tool_capabilities = {
@@ -25,7 +25,7 @@ minetest.register_tool("default:pick_wood", {
 	},
 })
 
-minetest.register_tool("default:pick_stone", {
+minetest.register_tool("minimal:pick_stone", {
 	description = "Stone Pickaxe",
 	inventory_image = "default_tool_stonepick.png",
 	tool_capabilities = {
@@ -36,7 +36,7 @@ minetest.register_tool("default:pick_stone", {
 	},
 })
 
-minetest.register_tool("default:pick_steel", {
+minetest.register_tool("minimal:pick_steel", {
 	description = "Steel Pickaxe",
 	inventory_image = "default_tool_steelpick.png",
 	tool_capabilities = {
@@ -47,7 +47,7 @@ minetest.register_tool("default:pick_steel", {
 	},
 })
 
-minetest.register_tool("default:pick_mese", {
+minetest.register_tool("minimal:pick_mese", {
 	description = "Mese Pickaxe",
 	inventory_image = "default_tool_mesepick.png",
 	tool_capabilities = {
@@ -61,7 +61,7 @@ minetest.register_tool("default:pick_mese", {
 	},
 })
 
-minetest.register_tool("default:shovel_stone", {
+minetest.register_tool("minimal:shovel_stone", {
 	description = "Stone Shovel",
 	inventory_image = "default_tool_stoneshovel.png",
 	tool_capabilities = {
@@ -72,7 +72,7 @@ minetest.register_tool("default:shovel_stone", {
 	},
 })
 
-minetest.register_tool("default:shovel_steel", {
+minetest.register_tool("minimal:shovel_steel", {
 	description = "Steel Shovel",
 	inventory_image = "default_tool_steelshovel.png",
 	tool_capabilities = {
@@ -83,7 +83,7 @@ minetest.register_tool("default:shovel_steel", {
 	},
 })
 
-minetest.register_tool("default:axe_stone", {
+minetest.register_tool("minimal:axe_stone", {
 	description = "Stone Axe",
 	inventory_image = "default_tool_stoneaxe.png",
 	tool_capabilities = {
@@ -95,7 +95,7 @@ minetest.register_tool("default:axe_stone", {
 	},
 })
 
-minetest.register_tool("default:axe_steel", {
+minetest.register_tool("minimal:axe_steel", {
 	description = "Steel Axe",
 	inventory_image = "default_tool_steelaxe.png",
 	tool_capabilities = {
@@ -108,271 +108,271 @@ minetest.register_tool("default:axe_steel", {
 })
 
 minetest.register_craft({
-	output = 'default:wood 4',
+	output = 'minimal:wood 4',
 	recipe = {
-		{'default:tree'},
+		{'minimal:tree'},
 	}
 })
 
 minetest.register_craft({
-	output = 'default:stick 4',
+	output = 'minimal:stick 4',
 	recipe = {
-		{'default:wood'},
+		{'minimal:wood'},
 	}
 })
 
 minetest.register_craft({
-	output = 'default:torch 4',
+	output = 'minimal:torch 4',
 	recipe = {
-		{'default:coal_lump'},
-		{'default:stick'},
+		{'minimal:coal_lump'},
+		{'minimal:stick'},
 	}
 })
 
 minetest.register_craft({
-	output = 'default:pick_wood',
+	output = 'minimal:pick_wood',
 	recipe = {
-		{'default:wood', 'default:wood', 'default:wood'},
-		{'', 'default:stick', ''},
-		{'', 'default:stick', ''},
+		{'minimal:wood', 'minimal:wood', 'minimal:wood'},
+		{'', 'minimal:stick', ''},
+		{'', 'minimal:stick', ''},
 	}
 })
 
 minetest.register_craft({
-	output = 'default:pick_stone',
+	output = 'minimal:pick_stone',
 	recipe = {
-		{'default:cobble', 'default:cobble', 'default:cobble'},
-		{'', 'default:stick', ''},
-		{'', 'default:stick', ''},
+		{'minimal:cobble', 'minimal:cobble', 'minimal:cobble'},
+		{'', 'minimal:stick', ''},
+		{'', 'minimal:stick', ''},
 	}
 })
 
 minetest.register_craft({
-	output = 'default:pick_steel',
+	output = 'minimal:pick_steel',
 	recipe = {
-		{'default:steel_ingot', 'default:steel_ingot', 'default:steel_ingot'},
-		{'', 'default:stick', ''},
-		{'', 'default:stick', ''},
+		{'minimal:steel_ingot', 'minimal:steel_ingot', 'minimal:steel_ingot'},
+		{'', 'minimal:stick', ''},
+		{'', 'minimal:stick', ''},
 	}
 })
 
 minetest.register_craft({
-	output = 'default:pick_mese',
+	output = 'minimal:pick_mese',
 	recipe = {
-		{'default:mese', 'default:mese', 'default:mese'},
-		{'', 'default:stick', ''},
-		{'', 'default:stick', ''},
+		{'minimal:mese', 'minimal:mese', 'minimal:mese'},
+		{'', 'minimal:stick', ''},
+		{'', 'minimal:stick', ''},
 	}
 })
 
 minetest.register_craft({
-	output = 'default:shovel_stone',
+	output = 'minimal:shovel_stone',
 	recipe = {
-		{'default:cobble'},
-		{'default:stick'},
-		{'default:stick'},
+		{'minimal:cobble'},
+		{'minimal:stick'},
+		{'minimal:stick'},
 	}
 })
 
 minetest.register_craft({
-	output = 'default:shovel_steel',
+	output = 'minimal:shovel_steel',
 	recipe = {
-		{'default:steel_ingot'},
-		{'default:stick'},
-		{'default:stick'},
+		{'minimal:steel_ingot'},
+		{'minimal:stick'},
+		{'minimal:stick'},
 	}
 })
 
 minetest.register_craft({
-	output = 'default:axe_stone',
+	output = 'minimal:axe_stone',
 	recipe = {
-		{'default:cobble', 'default:cobble'},
-		{'default:cobble', 'default:stick'},
-		{'', 'default:stick'},
+		{'minimal:cobble', 'minimal:cobble'},
+		{'minimal:cobble', 'minimal:stick'},
+		{'', 'minimal:stick'},
 	}
 })
 
 minetest.register_craft({
-	output = 'default:axe_steel',
+	output = 'minimal:axe_steel',
 	recipe = {
-		{'default:steel_ingot', 'default:steel_ingot'},
-		{'default:steel_ingot', 'default:stick'},
-		{'', 'default:stick'},
+		{'minimal:steel_ingot', 'minimal:steel_ingot'},
+		{'minimal:steel_ingot', 'minimal:stick'},
+		{'', 'minimal:stick'},
 	}
 })
 
 minetest.register_craft({
-	output = 'default:chest',
+	output = 'minimal:chest',
 	recipe = {
-		{'default:wood', 'default:wood', 'default:wood'},
-		{'default:wood', '', 'default:wood'},
-		{'default:wood', 'default:wood', 'default:wood'},
+		{'minimal:wood', 'minimal:wood', 'minimal:wood'},
+		{'minimal:wood', '', 'minimal:wood'},
+		{'minimal:wood', 'minimal:wood', 'minimal:wood'},
 	}
 })
 
 minetest.register_craft({
-	output = 'default:furnace',
+	output = 'minimal:furnace',
 	recipe = {
-		{'default:cobble', 'default:cobble', 'default:cobble'},
-		{'default:cobble', '', 'default:cobble'},
-		{'default:cobble', 'default:cobble', 'default:cobble'},
+		{'minimal:cobble', 'minimal:cobble', 'minimal:cobble'},
+		{'minimal:cobble', '', 'minimal:cobble'},
+		{'minimal:cobble', 'minimal:cobble', 'minimal:cobble'},
 	}
 })
 
 minetest.register_craft({
-	output = 'default:ladder',
+	output = 'minimal:ladder',
 	recipe = {
-		{'default:stick', '', 'default:stick'},
-		{'default:stick', 'default:stick', 'default:stick'},
-		{'default:stick', '', 'default:stick'},
+		{'minimal:stick', '', 'minimal:stick'},
+		{'minimal:stick', 'minimal:stick', 'minimal:stick'},
+		{'minimal:stick', '', 'minimal:stick'},
 	}
 })
 
 minetest.register_craft({
 	type = "cooking",
-	output = "default:glass",
-	recipe = "default:sand",
+	output = "minimal:glass",
+	recipe = "minimal:sand",
 })
 
 minetest.register_craft({
 	type = "cooking",
-	output = "default:stone",
-	recipe = "default:cobble",
+	output = "minimal:stone",
+	recipe = "minimal:cobble",
 })
 
 minetest.register_craft({
 	type = "cooking",
-	output = "default:steel_ingot",
-	recipe = "default:iron_lump",
+	output = "minimal:steel_ingot",
+	recipe = "minimal:iron_lump",
 })
 
 minetest.register_craft({
 	type = "fuel",
-	recipe = "default:tree",
+	recipe = "minimal:tree",
 	burntime = 30,
 })
 
 minetest.register_craft({
 	type = "fuel",
-	recipe = "default:leaves",
+	recipe = "minimal:leaves",
 	burntime = 1,
 })
 
 minetest.register_craft({
 	type = "fuel",
-	recipe = "default:ladder",
+	recipe = "minimal:ladder",
 	burntime = 5,
 })
 
 minetest.register_craft({
 	type = "fuel",
-	recipe = "default:wood",
+	recipe = "minimal:wood",
 	burntime = 7,
 })
 
 minetest.register_craft({
 	type = "fuel",
-	recipe = "default:mese",
+	recipe = "minimal:mese",
 	burntime = 30,
 })
 
 minetest.register_craft({
 	type = "fuel",
-	recipe = "default:lava_source",
+	recipe = "minimal:lava_source",
 	burntime = 60,
 })
 
 minetest.register_craft({
 	type = "fuel",
-	recipe = "default:torch",
+	recipe = "minimal:torch",
 	burntime = 4,
 })
 
 minetest.register_craft({
 	type = "fuel",
-	recipe = "default:chest",
+	recipe = "minimal:chest",
 	burntime = 30,
 })
 
 minetest.register_craft({
 	type = "fuel",
-	recipe = "default:sapling",
+	recipe = "minimal:sapling",
 	burntime = 10,
 })
 
 minetest.register_craft({
 	type = "fuel",
-	recipe = "default:apple",
+	recipe = "minimal:apple",
 	burntime = 3,
 })
 
 minetest.register_craft({
 	type = "fuel",
-	recipe = "default:coal_lump",
+	recipe = "minimal:coal_lump",
 	burntime = 40,
 })
 
-minetest.register_node("default:stone", {
+minetest.register_node("minimal:stone", {
 	description = "Stone",
 	tiles = {"default_stone.png"},
 	groups = {cracky=3},
-	drop = 'default:cobble',
+	drop = 'minimal:cobble',
 	sounds = {footstep={name="default_hard_footstep",gain=0.2}, dug={name="default_dug_node",gain=1.0}, dig={name="default_dig_cracky",gain=0.4}},
 })
 
-minetest.register_node("default:stone_with_coal", {
+minetest.register_node("minimal:stone_with_coal", {
 	description = "Coal Ore",
 	tiles = {"default_stone.png^default_mineral_coal.png"},
 	groups = {cracky=3},
-	drop = 'default:coal_lump',
+	drop = 'minimal:coal_lump',
 	sounds = {footstep={name="default_hard_footstep",gain=0.2}, dug={name="default_dug_node",gain=1.0}, dig={name="default_dig_cracky",gain=0.4}},
 })
 
-minetest.register_node("default:stone_with_iron", {
+minetest.register_node("minimal:stone_with_iron", {
 	description = "Iron Ore",
 	tiles = {"default_stone.png^default_mineral_iron.png"},
 	groups = {cracky=3},
-	drop = 'default:iron_lump',
+	drop = 'minimal:iron_lump',
 	sounds = {footstep={name="default_hard_footstep",gain=0.2}, dug={name="default_dug_node",gain=1.0}, dig={name="default_dig_cracky",gain=0.4}},
 })
 
-minetest.register_node("default:dirt_with_grass", {
+minetest.register_node("minimal:dirt_with_grass", {
 	description = "Dirt with Grass",
 	tiles = {"default_grass.png", "default_dirt.png", "default_dirt.png^default_grass_side.png"},
 	groups = {crumbly=3},
-	drop = 'default:dirt',
+	drop = 'minimal:dirt',
 	sounds = {footstep={name="default_grass_footstep",gain=0.4}, dug={name="",gain=1.0}, dig={name="default_dig_crumbly",gain=0.4}},
 })
 
-minetest.register_node("default:dirt", {
+minetest.register_node("minimal:dirt", {
 	description = "Dirt",
 	tiles = {"default_dirt.png"},
 	groups = {crumbly=3},
 	sounds = {footstep={name="default_grass_footstep",gain=0.4}, dug={name="",gain=1.0}, dig={name="default_dig_crumbly",gain=0.4}},
 })
 
-minetest.register_node("default:sand", {
+minetest.register_node("minimal:sand", {
 	description = "Sand",
 	tiles = {"default_sand.png"},
 	groups = {crumbly=3},
 	sounds = {footstep={name="default_grass_footstep",gain=0.25}, dug={name="",gain=0.25}, dig={name="default_dig_crumbly",gain=0.4}},
 })
 
-minetest.register_node("default:gravel", {
+minetest.register_node("minimal:gravel", {
 	description = "Gravel",
 	tiles = {"default_gravel.png"},
 	groups = {crumbly=2},
 	sounds = {footstep={name="default_gravel_footstep",gain=0.45}, dug={name="",gain=1.0}, dig={name="default_dig_crumbly",gain=0.4}},
 })
 
-minetest.register_node("default:tree", {
+minetest.register_node("minimal:tree", {
 	description = "Tree",
 	tiles = {"default_tree_top.png", "default_tree_top.png", "default_tree.png"},
 	groups = {snappy=1,choppy=2,oddly_breakable_by_hand=1,flammable=2},
 	sounds = {footstep={name="default_hard_footstep",gain=0.3}, dug={name="default_dug_node",gain=1.0}, dig={name="default_dig_choppy",gain=0.4}},
 })
 
-minetest.register_node("default:leaves", {
+minetest.register_node("minimal:leaves", {
 	description = "Leaves",
 	drawtype = "allfaces_optional",
 	visual_scale = 1.3,
@@ -383,18 +383,18 @@ minetest.register_node("default:leaves", {
 		max_items = 1,
 		items = {
 			{
-				items = {'default:sapling'},
+				items = {'minimal:sapling'},
 				rarity = 20,
 			},
 			{
-				items = {'default:leaves'},
+				items = {'minimal:leaves'},
 			}
 		}
 	},
 	sounds = {footstep={name="default_grass_footstep",gain=0.25}, dug={name="",gain=1.0}, dig={name="default_dig_crumbly",gain=0.4}},
 })
 
-minetest.register_node("default:glass", {
+minetest.register_node("minimal:glass", {
 	description = "Glass",
 	drawtype = "glasslike",
 	tiles = {"default_glass.png"},
@@ -405,7 +405,7 @@ minetest.register_node("default:glass", {
 	sounds = {footstep={name="default_hard_footstep",gain=0.25}, dug={name="default_break_glass",gain=1.0}, dig={name="",gain=0.4}},
 })
 
-minetest.register_node("default:ladder", {
+minetest.register_node("minimal:ladder", {
 	description = "Ladder",
 	drawtype = "signlike",
 	tiles = {"default_ladder.png"},
@@ -424,21 +424,21 @@ minetest.register_node("default:ladder", {
 	sounds = {footstep={name="default_hard_footstep",gain=0.3}, dug={name="",gain=1.0}, dig={name="default_dig_choppy",gain=0.4}},
 })
 
-minetest.register_node("default:wood", {
+minetest.register_node("minimal:wood", {
 	description = "Wooden Planks",
 	tiles = {"default_wood.png"},
 	groups = {snappy=1,choppy=2,oddly_breakable_by_hand=2,flammable=3},
 	sounds = {footstep={name="default_hard_footstep",gain=0.3}, dug={name="default_dug_node",gain=1.0}, dig={name="default_dig_choppy",gain=0.4}},
 })
 
-minetest.register_node("default:mese", {
+minetest.register_node("minimal:mese", {
 	description = "Mese",
 	tiles = {"default_mese.png"},
 	groups = {cracky=1},
 	sounds = {footstep={name="",gain=1.0}, dug={name="default_dug_node",gain=1.0}, dig={name="default_dig_cracky",gain=0.4}},
 })
 
-minetest.register_node("default:water_flowing", {
+minetest.register_node("minimal:water_flowing", {
 	description = "Flowing Water",
 	inventory_image = minetest.inventorycube("default_water.png"),
 	drawtype = "flowingliquid",
@@ -454,14 +454,14 @@ minetest.register_node("default:water_flowing", {
 	diggable = false,
 	buildable_to = true,
 	liquidtype = "flowing",
-	liquid_alternative_flowing = "default:water_flowing",
-	liquid_alternative_source = "default:water_source",
+	liquid_alternative_flowing = "minimal:water_flowing",
+	liquid_alternative_source = "minimal:water_source",
 	liquid_viscosity = 1,
 	post_effect_color = {a=220, r=10, g=10, b=30},
 	groups = {water=3, liquid=3, puts_out_fire=1, not_in_creative_inventory=1},
 })
 
-minetest.register_node("default:water_source", {
+minetest.register_node("minimal:water_source", {
 	description = "Water Source",
 	inventory_image = minetest.inventorycube("default_water.png"),
 	drawtype = "liquid",
@@ -476,14 +476,14 @@ minetest.register_node("default:water_source", {
 	diggable = false,
 	buildable_to = true,
 	liquidtype = "source",
-	liquid_alternative_flowing = "default:water_flowing",
-	liquid_alternative_source = "default:water_source",
+	liquid_alternative_flowing = "minimal:water_flowing",
+	liquid_alternative_source = "minimal:water_source",
 	liquid_viscosity = 1,
 	post_effect_color = {a=220, r=10, g=10, b=30},
 	groups = {water=3, liquid=3, puts_out_fire=1},
 })
 
-minetest.register_node("default:lava_flowing", {
+minetest.register_node("minimal:lava_flowing", {
 	description = "Flowing Lava",
 	inventory_image = minetest.inventorycube("default_lava.png"),
 	drawtype = "flowingliquid",
@@ -500,15 +500,15 @@ minetest.register_node("default:lava_flowing", {
 	diggable = false,
 	buildable_to = true,
 	liquidtype = "flowing",
-	liquid_alternative_flowing = "default:lava_flowing",
-	liquid_alternative_source = "default:lava_source",
+	liquid_alternative_flowing = "minimal:lava_flowing",
+	liquid_alternative_source = "minimal:lava_source",
 	liquid_viscosity = 7,
 	damage_per_second = 4*2,
 	post_effect_color = {a=192, r=255, g=64, b=0},
 	groups = {lava=3, liquid=2, hot=3, igniter=1, not_in_creative_inventory=1},
 })
 
-minetest.register_node("default:lava_source", {
+minetest.register_node("minimal:lava_source", {
 	description = "Lava Source",
 	inventory_image = minetest.inventorycube("default_lava.png"),
 	drawtype = "liquid",
@@ -524,15 +524,15 @@ minetest.register_node("default:lava_source", {
 	diggable = false,
 	buildable_to = true,
 	liquidtype = "source",
-	liquid_alternative_flowing = "default:lava_flowing",
-	liquid_alternative_source = "default:lava_source",
+	liquid_alternative_flowing = "minimal:lava_flowing",
+	liquid_alternative_source = "minimal:lava_source",
 	liquid_viscosity = 7,
 	damage_per_second = 4*2,
 	post_effect_color = {a=192, r=255, g=64, b=0},
 	groups = {lava=3, liquid=2, hot=3, igniter=1},
 })
 
-minetest.register_node("default:torch", {
+minetest.register_node("minimal:torch", {
 	description = "Torch",
 	drawtype = "torchlike",
 	tiles = {"default_torch_on_floor.png", "default_torch_on_ceiling.png", "default_torch.png"},
@@ -554,7 +554,7 @@ minetest.register_node("default:torch", {
 	sounds = {footstep={name="",gain=1.0}, dug={name="",gain=1.0}, dig={name="",gain=1.0}},
 })
 
-minetest.register_node("default:chest", {
+minetest.register_node("minimal:chest", {
 	description = "Chest",
 	tiles = {"default_chest_top.png", "default_chest_top.png", "default_chest_side.png",
 		"default_chest_side.png", "default_chest_side.png", "default_chest_front.png"},
@@ -608,7 +608,7 @@ local furnace_inactive_formspec =
 	"list[current_name;dst;5,1;2,2;]"..
 	"list[current_player;main;0,5;8,4;]"
 
-minetest.register_node("default:furnace", {
+minetest.register_node("minimal:furnace", {
 	description = "Furnace",
 	tiles = {"default_furnace_top.png", "default_furnace_bottom.png", "default_furnace_side.png",
 		"default_furnace_side.png", "default_furnace_side.png", "default_furnace_front.png"},
@@ -643,13 +643,13 @@ minetest.register_node("default:furnace", {
 	end,
 })
 
-minetest.register_node("default:furnace_active", {
+minetest.register_node("minimal:furnace_active", {
 	description = "Furnace",
 	tiles = {"default_furnace_top.png", "default_furnace_bottom.png", "default_furnace_side.png",
 		"default_furnace_side.png", "default_furnace_side.png", "default_furnace_front_active.png"},
 	paramtype2 = "facedir",
 	light_source = 8,
-	drop = "default:furnace",
+	drop = "minimal:furnace",
 	groups = {cracky=2, not_in_creative_inventory=1},
 	legacy_facedir_simple = true,
 	sounds = {footstep={name="default_hard_footstep",gain=0.2}, dug={name="default_dug_node",gain=1.0}, dig={name="default_dig_cracky",gain=0.4}},
@@ -695,7 +695,7 @@ function hacky_swap_node(pos,name)
 end
 
 minetest.register_abm({
-	nodenames = {"default:furnace","default:furnace_active"},
+	nodenames = {"minimal:furnace","minimal:furnace_active"},
 	interval = 1.0,
 	chance = 1,
 	action = function(pos, node, active_object_count, active_object_count_wider)
@@ -743,7 +743,7 @@ minetest.register_abm({
 			local percent = math.floor(meta:get_float("fuel_time") /
 					meta:get_float("fuel_totaltime") * 100)
 			meta:set_string("infotext","Furnace active: "..percent.."%")
-			hacky_swap_node(pos,"default:furnace_active")
+			hacky_swap_node(pos,"minimal:furnace_active")
 			meta:set_string("formspec",
 				"size[8,9]"..
 				"image[2,2;1,1;default_furnace_fire_bg.png^[lowpart:"..
@@ -769,7 +769,7 @@ minetest.register_abm({
 
 		if fuel.time <= 0 then
 			meta:set_string("infotext","Furnace out of fuel")
-			hacky_swap_node(pos,"default:furnace")
+			hacky_swap_node(pos,"minimal:furnace")
 			meta:set_string("formspec", furnace_inactive_formspec)
 			return
 		end
@@ -777,7 +777,7 @@ minetest.register_abm({
 		if cooked.item:is_empty() then
 			if was_active then
 				meta:set_string("infotext","Furnace is empty")
-				hacky_swap_node(pos,"default:furnace")
+				hacky_swap_node(pos,"minimal:furnace")
 				meta:set_string("formspec", furnace_inactive_formspec)
 			end
 			return
@@ -792,14 +792,14 @@ minetest.register_abm({
 	end,
 })
 
-minetest.register_node("default:cobble", {
+minetest.register_node("minimal:cobble", {
 	description = "Cobblestone",
 	tiles = {"default_cobble.png"},
 	groups = {cracky=3},
 	sounds = {footstep={name="default_hard_footstep",gain=0.2}, dug={name="default_dug_node",gain=1.0}, dig={name="default_dig_cracky",gain=0.4}},
 })
 
-minetest.register_node("default:sapling", {
+minetest.register_node("minimal:sapling", {
 	description = "Sapling",
 	drawtype = "plantlike",
 	visual_scale = 1.0,
@@ -813,7 +813,7 @@ minetest.register_node("default:sapling", {
 	sounds = {footstep={name="",gain=1.0}, dug={name="",gain=1.0}, dig={name="default_dig_crumbly",gain=0.4}},
 })
 
-minetest.register_node("default:apple", {
+minetest.register_node("minimal:apple", {
 	description = "Apple",
 	drawtype = "plantlike",
 	visual_scale = 1.0,
@@ -827,46 +827,46 @@ minetest.register_node("default:apple", {
 	sounds = {footstep={name="",gain=1.0}, dug={name="",gain=1.0}, dig={name="default_dig_crumbly",gain=0.4}},
 })
 
-minetest.register_craftitem("default:stick", {
+minetest.register_craftitem("minimal:stick", {
 	description = "Stick",
 	inventory_image = "default_stick.png",
 })
 
-minetest.register_craftitem("default:coal_lump", {
+minetest.register_craftitem("minimal:coal_lump", {
 	description = "Coal Lump",
 	inventory_image = "default_coal_lump.png",
 })
 
-minetest.register_craftitem("default:iron_lump", {
+minetest.register_craftitem("minimal:iron_lump", {
 	description = "Iron Lump",
 	inventory_image = "default_iron_lump.png",
 })
 
-minetest.register_craftitem("default:steel_ingot", {
+minetest.register_craftitem("minimal:steel_ingot", {
 	description = "Steel Ingot",
 	inventory_image = "default_steel_ingot.png",
 })
 
 minetest.register_alias("mapgen_air", "air")
-minetest.register_alias("mapgen_stone", "default:stone")
-minetest.register_alias("mapgen_tree", "default:tree")
-minetest.register_alias("mapgen_leaves", "default:leaves")
-minetest.register_alias("mapgen_apple", "default:apple")
-minetest.register_alias("mapgen_water_source", "default:water_source")
-minetest.register_alias("mapgen_dirt", "default:dirt")
-minetest.register_alias("mapgen_sand", "default:sand")
-minetest.register_alias("mapgen_gravel", "default:gravel")
-minetest.register_alias("mapgen_clay", "default:sand")
-minetest.register_alias("mapgen_lava_source", "default:lava_source")
-minetest.register_alias("mapgen_cobble", "default:cobble")
-minetest.register_alias("mapgen_mossycobble", "default:cobble")
-minetest.register_alias("mapgen_dirt_with_grass", "default:dirt_with_grass")
+minetest.register_alias("mapgen_stone", "minimal:stone")
+minetest.register_alias("mapgen_tree", "minimal:tree")
+minetest.register_alias("mapgen_leaves", "minimal:leaves")
+minetest.register_alias("mapgen_apple", "minimal:apple")
+minetest.register_alias("mapgen_water_source", "minimal:water_source")
+minetest.register_alias("mapgen_dirt", "minimal:dirt")
+minetest.register_alias("mapgen_sand", "minimal:sand")
+minetest.register_alias("mapgen_gravel", "minimal:gravel")
+minetest.register_alias("mapgen_clay", "minimal:sand")
+minetest.register_alias("mapgen_lava_source", "minimal:lava_source")
+minetest.register_alias("mapgen_cobble", "minimal:cobble")
+minetest.register_alias("mapgen_mossycobble", "minimal:cobble")
+minetest.register_alias("mapgen_dirt_with_grass", "minimal:dirt_with_grass")
 minetest.register_alias("mapgen_junglegrass", "air")
-minetest.register_alias("mapgen_stone_with_coal", "default:stone_with_coal")
-minetest.register_alias("mapgen_stone_with_iron", "default:stone_with_iron")
-minetest.register_alias("mapgen_mese", "default:mese")
-minetest.register_alias("mapgen_desert_sand", "default:sand")
-minetest.register_alias("mapgen_desert_stone", "default:stone")
+minetest.register_alias("mapgen_stone_with_coal", "minimal:stone_with_coal")
+minetest.register_alias("mapgen_stone_with_iron", "minimal:stone_with_iron")
+minetest.register_alias("mapgen_mese", "minimal:mese")
+minetest.register_alias("mapgen_desert_sand", "minimal:sand")
+minetest.register_alias("mapgen_desert_stone", "minimal:stone")
 
 function generate_ore(name, wherein, minp, maxp, seed, chunks_per_volume, chunk_size, ore_per_chunk, height_min, height_max)
 	if maxp.y < height_min or minp.y > height_max then
@@ -904,12 +904,12 @@ function generate_ore(name, wherein, minp, maxp, seed, chunks_per_volume, chunk_
 end
 
 minetest.register_on_generated(function(minp, maxp, seed)
-	generate_ore("default:stone_with_coal", "default:stone", minp, maxp, seed+0, 1/8/8/8,    3, 8, -31000,  64)
-	generate_ore("default:stone_with_coal", "default:stone", minp, maxp, seed+7, 1/24/24/24, 6,27, -31000,  0)
-	generate_ore("default:stone_with_iron", "default:stone", minp, maxp, seed+1, 1/12/12/12, 2, 3,    -15,   2)
-	generate_ore("default:stone_with_iron", "default:stone", minp, maxp, seed+2, 1/9/9/9,    3, 5,    -63, -16)
-	generate_ore("default:stone_with_iron", "default:stone", minp, maxp, seed+3, 1/7/7/7,    3, 5, -31000, -64)
-	generate_ore("default:stone_with_iron", "default:stone", minp, maxp, seed+6, 1/24/24/24, 6,27, -31000, -64)
-	generate_ore("default:mese",            "default:stone", minp, maxp, seed+4, 1/16/16/16, 2, 3,   -127, -64)
-	generate_ore("default:mese",            "default:stone", minp, maxp, seed+5, 1/9/9/9,    3, 5, -31000,-128)
+	generate_ore("minimal:stone_with_coal", "minimal:stone", minp, maxp, seed+0, 1/8/8/8,    3, 8, -31000,  64)
+	generate_ore("minimal:stone_with_coal", "minimal:stone", minp, maxp, seed+7, 1/24/24/24, 6,27, -31000,  0)
+	generate_ore("minimal:stone_with_iron", "minimal:stone", minp, maxp, seed+1, 1/12/12/12, 2, 3,    -15,   2)
+	generate_ore("minimal:stone_with_iron", "minimal:stone", minp, maxp, seed+2, 1/9/9/9,    3, 5,    -63, -16)
+	generate_ore("minimal:stone_with_iron", "minimal:stone", minp, maxp, seed+3, 1/7/7/7,    3, 5, -31000, -64)
+	generate_ore("minimal:stone_with_iron", "minimal:stone", minp, maxp, seed+6, 1/24/24/24, 6,27, -31000, -64)
+	generate_ore("minimal:mese",            "minimal:stone", minp, maxp, seed+4, 1/16/16/16, 2, 3,   -127, -64)
+	generate_ore("minimal:mese",            "minimal:stone", minp, maxp, seed+5, 1/9/9/9,    3, 5, -31000,-128)
 end)
