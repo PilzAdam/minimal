@@ -1,5 +1,3 @@
-dofile(minetest.get_modpath("default").."/mapgen.lua")
-
 minetest.register_item(":", {
 	type = "none",
 	wield_image = "wieldhand.png",
