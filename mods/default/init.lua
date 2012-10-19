@@ -1,7 +1,6 @@
 default = {}
 
 dofile(minetest.get_modpath("default").."/mapgen.lua")
-dofile(minetest.get_modpath("default").."/leafdecay.lua")
 
 minetest.register_item(":", {
 	type = "none",
@@ -442,7 +441,7 @@ minetest.register_node("default:gravel", {
 minetest.register_node("default:tree", {
 	description = "Tree",
 	tiles = {"default_tree_top.png", "default_tree_top.png", "default_tree.png"},
-	groups = {tree=1,snappy=1,choppy=2,oddly_breakable_by_hand=1,flammable=2},
+	groups = {snappy=1,choppy=2,oddly_breakable_by_hand=1,flammable=2},
 	sounds = default.node_sound_wood_defaults(),
 })
 
@@ -454,7 +453,7 @@ minetest.register_node("default:leaves", {
 	paramtype = "light",
 	walkable = false,
 	climbable = true,
-	groups = {snappy=3, leafdecay=3, flammable=2},
+	groups = {snappy=3,flammable=2},
 	drop = {
 		max_items = 1,
 		items = {
