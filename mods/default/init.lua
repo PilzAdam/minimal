@@ -921,25 +921,3 @@ minetest.register_craftitem("default:steel_ingot", {
 	description = "Steel Ingot",
 	inventory_image = "default_steel_ingot.png",
 })
-
-minetest.register_abm({
-	nodenames = {"default:lava_flowing"},
-	neighbors = {"default:water_source", "default:water_flowing"},
-	interval = 1,
-	chance = 1,
-	action = function(pos, node)
-		node.name = "default:cobble"
-		minetest.env:set_node(pos, node)
-	end
-})
-
-minetest.register_abm({
-	nodenames = {"default:lava_source"},
-	neighbors = {"default:water_source", "default:water_flowing"},
-	interval = 1,
-	chance = 1,
-	action = function(pos, node)
-		node.name = "default:stone"
-		minetest.env:set_node(pos, node)
-	end
-})
