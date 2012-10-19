@@ -1,4 +1,4 @@
-Minetest 0.4 mod: default
+Minetest 0.4 game: minimal
 ==========================
 
 License of source code:
