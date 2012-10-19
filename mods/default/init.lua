@@ -378,8 +378,6 @@ minetest.register_node("default:leaves", {
 	visual_scale = 1.3,
 	tiles = {"default_leaves.png"},
 	paramtype = "light",
-	walkable = false,
-	climbable = true,
 	groups = {snappy=3,flammable=2},
 	drop = {
 		max_items = 1,
