@@ -25,33 +25,3 @@ Copyright (C) 2010-2012 celeron55, Perttu Ahola <celeron55@gmail.com>
 Originating from work by kddekadenz/Dogers:
   default_grass_footstep.{1,2,3}.ogg
   default_dig_crumbly.{1,2}.ogg
-
-Cisoun's WTFPL texture pack:
-  default_chest_front.png
-  default_chest_side.png
-  default_chest_top.png
-  default_cobble.png
-  default_dirt.png
-  default_grass.png
-  default_grass_side.png
-  default_lava.png
-  default_leaves.png
-  default_sand.png
-  default_sapling.png
-  default_stone.png
-  default_tool_mesepick.png
-  default_tool_steelpick.png
-  default_tool_steelshovel.png
-  default_tool_steelsword.png
-  default_tool_stonepick.png
-  default_tool_stoneshovel.png
-  default_tool_woodpick.png
-  default_tree.png
-  default_tree_top.png
-  default_water.png
-
-Originating from G4JC's Almost MC Texture Pack:
-  default_wood.png
-  default_torch.png
-  default_torch_on_ceiling.png
-  default_torch_on_floor.png
