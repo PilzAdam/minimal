@@ -813,6 +813,28 @@ minetest.register_node("minimal:sapling", {
 	sounds = {footstep={name="",gain=1.0}, dug={name="",gain=1.0}, dig={name="default_dig_crumbly",gain=0.4}},
 })
 
+minetest.register_abm({
+	nodenames = {"minimal:sapling"},
+	interval = 10,
+	chance = 50,
+	action = function(pos, node)
+		if not minetest.env:get_node_light(pos) then
+			return
+		end
+		if minetest.env:get_node_light(pos) < 8 then
+			return
+		end
+		for dy=1,5 do
+			pos.y = pos.y+dy
+			if not minetest.registered_nodes[minetest.env:get_node(pos).name].buildable_to then
+				return
+			end
+			pos.y = pos.y-dy
+		end
+		make_tree(pos, math.random(1,10)==1)
+	end
+})
+
 minetest.register_node("minimal:apple", {
 	description = "Apple",
 	drawtype = "plantlike",
@@ -913,3 +935,44 @@ minetest.register_on_generated(function(minp, maxp, seed)
 	generate_ore("minimal:mese",            "minimal:stone", minp, maxp, seed+4, 1/16/16/16, 2, 3,   -127, -64)
 	generate_ore("minimal:mese",            "minimal:stone", minp, maxp, seed+5, 1/9/9/9,    3, 5, -31000,-128)
 end)
+
+function make_tree(pos, is_apple_tree)
+	for _=1,math.random(4,5) do
+		minetest.env:set_node(pos, {name="minimal:tree"})
+		pos.y = pos.y+1
+	end
+	
+	pos.y = pos.y-1
+	
+	local function set_leaves(pos)
+		if minetest.registered_nodes[minetest.env:get_node(pos).name].buildable_to then
+			if is_apple_tree and math.random(1, 10)==1 then
+				minetest.env:set_node(pos, {name="minimal:apple"})
+			else
+				minetest.env:set_node(pos, {name="minimal:leaves"})
+			end
+		end
+	end
+	
+	for dx=-1,1 do
+	for dy=-1,1 do
+	for dz=-1,1 do
+		set_leaves({x=pos.x+dx,y=pos.y+dy,z=pos.z+dz})
+	end
+	end
+	end
+	
+	for _=1,8 do
+		local p = {x=math.random(-2, 1),y=math.random(-1, 1),z=math.random(-2, 1),}
+		p.x = p.x+pos.x
+		p.y = p.y+pos.y
+		p.z = p.z+pos.z
+		for dx=0,1 do
+		for dy=0,1 do
+		for dz=0,1 do
+			set_leaves({x=p.x+dx,y=p.y+dy,z=p.z+dz})
+		end
+		end
+		end
+	end
+end
