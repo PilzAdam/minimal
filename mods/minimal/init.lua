@@ -351,6 +351,50 @@ minetest.register_node("minimal:dirt", {
 	sounds = {footstep={name="default_grass_footstep",gain=0.4}, dug={name="",gain=1.0}, dig={name="default_dig_crumbly",gain=0.4}},
 })
 
+minetest.register_abm({
+	nodenames = {"minimal:dirt"},
+	interval = 2,
+	chance = 200,
+	action = function(pos, node)
+		pos.y = pos.y+1
+		local n = minetest.registered_nodes[minetest.env:get_node(pos).name]
+		if not n then
+			return
+		end
+		if not n.sunlight_propagates then
+			return
+		end
+		if n.liquidtype and n.liquidtype ~= "none" then
+			return
+		end
+		if not minetest.env:get_node_light(pos) then
+			return
+		end
+		if minetest.env:get_node_light(pos) < 13 then
+			return
+		end
+		pos.y = pos.y-1
+		minetest.env:set_node(pos, {name="minimal:dirt_with_grass"})
+	end
+})
+
+minetest.register_abm({
+	nodenames = {"minimal:dirt_with_grass"},
+	interval = 2,
+	chance = 20,
+	action = function(pos, node)
+		pos.y = pos.y+1
+		local n = minetest.registered_nodes[minetest.env:get_node(pos).name]
+		if not n then
+			return
+		end
+		if not n.sunlight_propagates or (n.liquidtype and n.liquidtype ~= "none") then
+			pos.y = pos.y-1
+			minetest.env:set_node(pos, {name="minimal:dirt"})
+		end
+	end
+})
+
 minetest.register_node("minimal:sand", {
 	description = "Sand",
 	tiles = {"default_sand.png"},
@@ -831,7 +875,7 @@ minetest.register_abm({
 			end
 			pos.y = pos.y-dy
 		end
-		make_tree(pos, math.random(1,10)==1)
+		make_tree(pos, math.random(1,4)==1)
 	end
 })
 
